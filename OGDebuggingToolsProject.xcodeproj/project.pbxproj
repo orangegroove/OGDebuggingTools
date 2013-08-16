@@ -19,6 +19,9 @@
 		0953FF0017BE82AE002D0BE6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0953FEE817BE82AE002D0BE6 /* UIKit.framework */; };
 		0953FF0817BE82AE002D0BE6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0953FF0617BE82AE002D0BE6 /* InfoPlist.strings */; };
 		0953FF0A17BE82AE002D0BE6 /* OGDebuggingToolsProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0953FF0917BE82AE002D0BE6 /* OGDebuggingToolsProjectTests.m */; };
+		0953FF1917BE83B4002D0BE6 /* NSObject+OGDebuggingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0953FF1817BE83B4002D0BE6 /* NSObject+OGDebuggingTools.m */; };
+		0953FF1F17BE869C002D0BE6 /* UIView+OGDebuggingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0953FF1E17BE869C002D0BE6 /* UIView+OGDebuggingTools.m */; };
+		AFEADDC79DD1445D8E68CBF3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1DD765C64D4351B9F31575 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,16 @@
 		0953FF0517BE82AE002D0BE6 /* OGDebuggingToolsProjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OGDebuggingToolsProjectTests-Info.plist"; sourceTree = "<group>"; };
 		0953FF0717BE82AE002D0BE6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0953FF0917BE82AE002D0BE6 /* OGDebuggingToolsProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OGDebuggingToolsProjectTests.m; sourceTree = "<group>"; };
+		0953FF1417BE82F9002D0BE6 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		0953FF1617BE82F9002D0BE6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		0953FF1717BE83B4002D0BE6 /* NSObject+OGDebuggingTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+OGDebuggingTools.h"; path = "OGDebuggingTools/NSObject+OGDebuggingTools.h"; sourceTree = "<group>"; };
+		0953FF1817BE83B4002D0BE6 /* NSObject+OGDebuggingTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+OGDebuggingTools.m"; path = "OGDebuggingTools/NSObject+OGDebuggingTools.m"; sourceTree = "<group>"; };
+		0953FF1A17BE84C1002D0BE6 /* OGDebuggingTools.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = OGDebuggingTools.podspec; sourceTree = "<group>"; };
+		0953FF1C17BE8511002D0BE6 /* OGDebuggingTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OGDebuggingTools.h; path = OGDebuggingTools/OGDebuggingTools.h; sourceTree = "<group>"; };
+		0953FF1D17BE869C002D0BE6 /* UIView+OGDebuggingTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+OGDebuggingTools.h"; sourceTree = "<group>"; };
+		0953FF1E17BE869C002D0BE6 /* UIView+OGDebuggingTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+OGDebuggingTools.m"; sourceTree = "<group>"; };
+		1D1DD765C64D4351B9F31575 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		54AE0AE076C5408B80745ABF /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +71,7 @@
 				0953FEE717BE82AE002D0BE6 /* CoreGraphics.framework in Frameworks */,
 				0953FEE917BE82AE002D0BE6 /* UIKit.framework in Frameworks */,
 				0953FEE517BE82AE002D0BE6 /* Foundation.framework in Frameworks */,
+				AFEADDC79DD1445D8E68CBF3 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +91,15 @@
 		0953FED817BE82AE002D0BE6 = {
 			isa = PBXGroup;
 			children = (
+				0953FF1417BE82F9002D0BE6 /* LICENSE */,
+				0953FF1617BE82F9002D0BE6 /* README.md */,
+				0953FF1A17BE84C1002D0BE6 /* OGDebuggingTools.podspec */,
+				0953FF1317BE82E9002D0BE6 /* OGDebuggingTools */,
 				0953FEEA17BE82AE002D0BE6 /* OGDebuggingToolsProject */,
 				0953FF0317BE82AE002D0BE6 /* OGDebuggingToolsProjectTests */,
 				0953FEE317BE82AE002D0BE6 /* Frameworks */,
 				0953FEE217BE82AE002D0BE6 /* Products */,
+				54AE0AE076C5408B80745ABF /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +119,7 @@
 				0953FEE617BE82AE002D0BE6 /* CoreGraphics.framework */,
 				0953FEE817BE82AE002D0BE6 /* UIKit.framework */,
 				0953FEFD17BE82AE002D0BE6 /* XCTest.framework */,
+				1D1DD765C64D4351B9F31575 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,10 +127,10 @@
 		0953FEEA17BE82AE002D0BE6 /* OGDebuggingToolsProject */ = {
 			isa = PBXGroup;
 			children = (
-				0953FEF317BE82AE002D0BE6 /* OGAppDelegate.h */,
-				0953FEF417BE82AE002D0BE6 /* OGAppDelegate.m */,
 				0953FEF617BE82AE002D0BE6 /* Images.xcassets */,
 				0953FEEB17BE82AE002D0BE6 /* Supporting Files */,
+				0953FEF317BE82AE002D0BE6 /* OGAppDelegate.h */,
+				0953FEF417BE82AE002D0BE6 /* OGAppDelegate.m */,
 			);
 			path = OGDebuggingToolsProject;
 			sourceTree = "<group>";
@@ -144,6 +164,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0953FF1317BE82E9002D0BE6 /* OGDebuggingTools */ = {
+			isa = PBXGroup;
+			children = (
+				0953FF1C17BE8511002D0BE6 /* OGDebuggingTools.h */,
+				0953FF1717BE83B4002D0BE6 /* NSObject+OGDebuggingTools.h */,
+				0953FF1817BE83B4002D0BE6 /* NSObject+OGDebuggingTools.m */,
+				0953FF1D17BE869C002D0BE6 /* UIView+OGDebuggingTools.h */,
+				0953FF1E17BE869C002D0BE6 /* UIView+OGDebuggingTools.m */,
+			);
+			name = OGDebuggingTools;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,9 +183,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0953FF0D17BE82AE002D0BE6 /* Build configuration list for PBXNativeTarget "OGDebuggingToolsProject" */;
 			buildPhases = (
+				5EC8D65350D0413FA8827408 /* Check Pods Manifest.lock */,
 				0953FEDD17BE82AE002D0BE6 /* Sources */,
 				0953FEDE17BE82AE002D0BE6 /* Frameworks */,
 				0953FEDF17BE82AE002D0BE6 /* Resources */,
+				C2A437E7A28546D9A807910B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,13 +269,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5EC8D65350D0413FA8827408 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C2A437E7A28546D9A807910B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0953FEDD17BE82AE002D0BE6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0953FEF517BE82AE002D0BE6 /* OGAppDelegate.m in Sources */,
+				0953FF1917BE83B4002D0BE6 /* NSObject+OGDebuggingTools.m in Sources */,
 				0953FEF117BE82AE002D0BE6 /* main.m in Sources */,
+				0953FF1F17BE869C002D0BE6 /* UIView+OGDebuggingTools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +422,7 @@
 		};
 		0953FF0E17BE82AE002D0BE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54AE0AE076C5408B80745ABF /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -366,6 +436,7 @@
 		};
 		0953FF0F17BE82AE002D0BE6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54AE0AE076C5408B80745ABF /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -436,6 +507,7 @@
 				0953FF0F17BE82AE002D0BE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0953FF1017BE82AE002D0BE6 /* Build configuration list for PBXNativeTarget "OGDebuggingToolsProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +516,7 @@
 				0953FF1217BE82AE002D0BE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
