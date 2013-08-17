@@ -20,7 +20,7 @@
 		0953FF0817BE82AE002D0BE6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0953FF0617BE82AE002D0BE6 /* InfoPlist.strings */; };
 		0953FF0A17BE82AE002D0BE6 /* OGDebuggingToolsProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0953FF0917BE82AE002D0BE6 /* OGDebuggingToolsProjectTests.m */; };
 		0953FF1917BE83B4002D0BE6 /* NSObject+OGDebuggingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0953FF1817BE83B4002D0BE6 /* NSObject+OGDebuggingTools.m */; };
-		0953FF1F17BE869C002D0BE6 /* UIView+OGDebuggingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0953FF1E17BE869C002D0BE6 /* UIView+OGDebuggingTools.m */; };
+		09F8B1E317BF49E0007C0128 /* UIView+OGDebuggingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F8B1E217BF49E0007C0128 /* UIView+OGDebuggingTools.m */; };
 		AFEADDC79DD1445D8E68CBF3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1DD765C64D4351B9F31575 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -57,8 +57,8 @@
 		0953FF1817BE83B4002D0BE6 /* NSObject+OGDebuggingTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+OGDebuggingTools.m"; path = "OGDebuggingTools/NSObject+OGDebuggingTools.m"; sourceTree = "<group>"; };
 		0953FF1A17BE84C1002D0BE6 /* OGDebuggingTools.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = OGDebuggingTools.podspec; sourceTree = "<group>"; };
 		0953FF1C17BE8511002D0BE6 /* OGDebuggingTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OGDebuggingTools.h; path = OGDebuggingTools/OGDebuggingTools.h; sourceTree = "<group>"; };
-		0953FF1D17BE869C002D0BE6 /* UIView+OGDebuggingTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+OGDebuggingTools.h"; sourceTree = "<group>"; };
-		0953FF1E17BE869C002D0BE6 /* UIView+OGDebuggingTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+OGDebuggingTools.m"; sourceTree = "<group>"; };
+		09F8B1E117BF49E0007C0128 /* UIView+OGDebuggingTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+OGDebuggingTools.h"; path = "OGDebuggingTools/UIView+OGDebuggingTools.h"; sourceTree = "<group>"; };
+		09F8B1E217BF49E0007C0128 /* UIView+OGDebuggingTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+OGDebuggingTools.m"; path = "OGDebuggingTools/UIView+OGDebuggingTools.m"; sourceTree = "<group>"; };
 		1D1DD765C64D4351B9F31575 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		54AE0AE076C5408B80745ABF /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -170,8 +170,8 @@
 				0953FF1C17BE8511002D0BE6 /* OGDebuggingTools.h */,
 				0953FF1717BE83B4002D0BE6 /* NSObject+OGDebuggingTools.h */,
 				0953FF1817BE83B4002D0BE6 /* NSObject+OGDebuggingTools.m */,
-				0953FF1D17BE869C002D0BE6 /* UIView+OGDebuggingTools.h */,
-				0953FF1E17BE869C002D0BE6 /* UIView+OGDebuggingTools.m */,
+				09F8B1E117BF49E0007C0128 /* UIView+OGDebuggingTools.h */,
+				09F8B1E217BF49E0007C0128 /* UIView+OGDebuggingTools.m */,
 			);
 			name = OGDebuggingTools;
 			sourceTree = "<group>";
@@ -310,7 +310,7 @@
 				0953FEF517BE82AE002D0BE6 /* OGAppDelegate.m in Sources */,
 				0953FF1917BE83B4002D0BE6 /* NSObject+OGDebuggingTools.m in Sources */,
 				0953FEF117BE82AE002D0BE6 /* main.m in Sources */,
-				0953FF1F17BE869C002D0BE6 /* UIView+OGDebuggingTools.m in Sources */,
+				09F8B1E317BF49E0007C0128 /* UIView+OGDebuggingTools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
