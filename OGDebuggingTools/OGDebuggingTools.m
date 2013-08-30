@@ -8,6 +8,16 @@
 
 #include "OGDebuggingTools.h"
 
+#pragma mark - Private
+
+static NSString* _OGNameFromCallStackSymbol(NSString* symbol)
+{
+	if (symbol.length > 51)
+		return [symbol substringFromIndex:51];
+	
+	return symbol;
+}
+
 static void _OGLog(NSString* format, va_list args)
 {
 	NSString* string		= [[NSString alloc] initWithFormat:format arguments:args];
@@ -17,7 +27,7 @@ static void _OGLog(NSString* format, va_list args)
 	
 	for (NSString* symbol in symbols) {
 		
-		NSString* stripped	= [symbol substringFromIndex:51];
+		NSString* stripped	= _OGNameFromCallStackSymbol(symbol);
 		BOOL skip			= NO;
 		
 		for (NSString* skipSymbol in skipSymbols)
@@ -36,6 +46,8 @@ static void _OGLog(NSString* format, va_list args)
 	
 	NSLog(@"\n%@\n%@", function, string);
 }
+
+#pragma mark - Public
 
 void __attribute__((overloadable)) OGLog(void)
 {
@@ -87,4 +99,14 @@ void __attribute__((overloadable))	OGLog(long long value)
 void __attribute__((overloadable))	OGLog(id value)
 {
 	OGLog(@"%@", value);
+}
+
+NSString* OGCallingFunction(void)
+{
+	NSArray* symbols = [NSThread callStackSymbols];
+	
+	if (symbols.count > 1)
+		return _OGNameFromCallStackSymbol(symbols[1]);
+	
+	return _OGNameFromCallStackSymbol(symbols.firstObject);
 }
