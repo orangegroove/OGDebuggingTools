@@ -101,4 +101,35 @@ deallocTracking;
 
 #endif
 
+- (NSString *)detailedDescription
+{
+	unsigned int outCount;
+	objc_property_t* properties	= class_copyPropertyList(self.class, &outCount);
+	NSMutableString* string		= [NSMutableString stringWithFormat:@"%@ <%p>", NSStringFromClass(self.class), self];
+	
+	for (unsigned int i = 0; i < outCount; i++) {
+		
+		objc_property_t property	= properties[i];
+		const char* propName		= property_getName(property);
+		
+		if (propName) {
+			
+			NSString* key	= [NSString stringWithCString:propName encoding:NSUTF8StringEncoding];
+			id value		= [self valueForKey:key];
+			
+			if (!value)
+				[string appendString:@"\n    %@: NULL"];
+			else if ([value isKindOfClass:NSData.class])
+				[string appendFormat:@"\n    %@ (%@): length %d", key, NSStringFromClass([value class]), ((NSData *)value).length];
+			else
+				[string appendFormat:@"\n    %@ (%@): %@", key, NSStringFromClass([value class]), value];
+			
+		}
+	}
+	
+	free(properties);
+	
+	return [NSString stringWithString:string];
+}
+
 @end

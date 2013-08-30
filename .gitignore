@@ -1,4 +1,3 @@
-# Xcode
 profile
 .DS_Store
 *.swp
@@ -24,6 +23,3 @@ xcuserdata/
 *.moved-aside
 Pods
 Podfile.lock
-Dex/_*.h
-Dex/_*.m
-chairs/*

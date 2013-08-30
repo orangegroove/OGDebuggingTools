@@ -36,4 +36,9 @@
  */
 - (void)setDeallocTrackingWithNote:(NSString *)note;
 
+/**
+ 
+ */
+- (NSString *)detailedDescription;
+
 @end

@@ -24,5 +24,16 @@
 
 #import <Foundation/Foundation.h>
 
+#import "NSManagedObject+OGDebuggingTools.h"
 #import "NSObject+OGDebuggingTools.h"
 #import "UIView+OGDebuggingTools.h"
+
+void __attribute__((overloadable))	OGLog(void);
+void __attribute__((overloadable))	OGLog(NSString* format, ...);
+void __attribute__((overloadable))	OGLog(float value);
+void __attribute__((overloadable))	OGLog(double value);
+void __attribute__((overloadable))	OGLog(int value);
+void __attribute__((overloadable))	OGLog(unsigned int value);
+void __attribute__((overloadable))	OGLog(long value);
+void __attribute__((overloadable))	OGLog(long long value);
+void __attribute__((overloadable))	OGLog(id value);

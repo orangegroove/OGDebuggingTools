@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		093DA26E17D0C84500F2AD65 /* OGDebuggingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 093DA26D17D0C84500F2AD65 /* OGDebuggingTools.m */; };
+		093DA27317D0CDDF00F2AD65 /* NSManagedObject+OGDebuggingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 093DA27217D0CDDF00F2AD65 /* NSManagedObject+OGDebuggingTools.m */; };
 		0953FEE517BE82AE002D0BE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0953FEE417BE82AE002D0BE6 /* Foundation.framework */; };
 		0953FEE717BE82AE002D0BE6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0953FEE617BE82AE002D0BE6 /* CoreGraphics.framework */; };
 		0953FEE917BE82AE002D0BE6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0953FEE817BE82AE002D0BE6 /* UIKit.framework */; };
@@ -35,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		093DA26D17D0C84500F2AD65 /* OGDebuggingTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OGDebuggingTools.m; path = OGDebuggingToolsProject/OGDebuggingTools.m; sourceTree = "<group>"; };
+		093DA27117D0CDDF00F2AD65 /* NSManagedObject+OGDebuggingTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+OGDebuggingTools.h"; path = "OGDebuggingTools/NSManagedObject+OGDebuggingTools.h"; sourceTree = "<group>"; };
+		093DA27217D0CDDF00F2AD65 /* NSManagedObject+OGDebuggingTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+OGDebuggingTools.m"; path = "OGDebuggingTools/NSManagedObject+OGDebuggingTools.m"; sourceTree = "<group>"; };
 		0953FEE117BE82AE002D0BE6 /* OGDebuggingToolsProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OGDebuggingToolsProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0953FEE417BE82AE002D0BE6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0953FEE617BE82AE002D0BE6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -168,6 +173,9 @@
 			isa = PBXGroup;
 			children = (
 				0953FF1C17BE8511002D0BE6 /* OGDebuggingTools.h */,
+				093DA26D17D0C84500F2AD65 /* OGDebuggingTools.m */,
+				093DA27117D0CDDF00F2AD65 /* NSManagedObject+OGDebuggingTools.h */,
+				093DA27217D0CDDF00F2AD65 /* NSManagedObject+OGDebuggingTools.m */,
 				0953FF1717BE83B4002D0BE6 /* NSObject+OGDebuggingTools.h */,
 				0953FF1817BE83B4002D0BE6 /* NSObject+OGDebuggingTools.m */,
 				09F8B1E117BF49E0007C0128 /* UIView+OGDebuggingTools.h */,
@@ -309,7 +317,9 @@
 			files = (
 				0953FEF517BE82AE002D0BE6 /* OGAppDelegate.m in Sources */,
 				0953FF1917BE83B4002D0BE6 /* NSObject+OGDebuggingTools.m in Sources */,
+				093DA26E17D0C84500F2AD65 /* OGDebuggingTools.m in Sources */,
 				0953FEF117BE82AE002D0BE6 /* main.m in Sources */,
+				093DA27317D0CDDF00F2AD65 /* NSManagedObject+OGDebuggingTools.m in Sources */,
 				09F8B1E317BF49E0007C0128 /* UIView+OGDebuggingTools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
