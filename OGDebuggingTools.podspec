@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                 = "OGDebuggingTools"
-  s.version              = "0.1.4"
+  s.version              = "0.1.5"
   s.summary              = "Code snippets for debugging"
   s.homepage             = "https://github.com/OrangeGroove/OGDebuggingTools"
   s.license              = { :type => "MIT" }

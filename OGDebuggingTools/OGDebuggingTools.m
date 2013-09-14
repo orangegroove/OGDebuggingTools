@@ -49,6 +49,16 @@ static void _OGLog(NSString* format, va_list args)
 
 #pragma mark - Public
 
+NSString* OGCallingFunction(void)
+{
+	NSArray* symbols = [NSThread callStackSymbols];
+	
+	if (symbols.count > 1)
+		return _OGNameFromCallStackSymbol(symbols[2]);
+	
+	return nil;
+}
+
 void __attribute__((overloadable)) OGLog(void)
 {
 	void * args = NULL;
@@ -99,14 +109,4 @@ void __attribute__((overloadable))	OGLog(long long value)
 void __attribute__((overloadable))	OGLog(id value)
 {
 	OGLog(@"%@", value);
-}
-
-NSString* OGCallingFunction(void)
-{
-	NSArray* symbols = [NSThread callStackSymbols];
-	
-	if (symbols.count > 1)
-		return _OGNameFromCallStackSymbol(symbols[1]);
-	
-	return _OGNameFromCallStackSymbol(symbols.firstObject);
 }
