@@ -18,10 +18,10 @@ static NSString* _OGNameFromCallStackSymbol(NSString* symbol)
 	return symbol;
 }
 
-static void _OGLog(NSString* format, va_list args)
+static void _OGLogAny(NSString* format, va_list args)
 {
 	NSString* string		= [[NSString alloc] initWithFormat:format arguments:args];
-	NSArray* skipSymbols	= @[@"_OGLog", @"_Z5OGLog"];
+	NSArray* skipSymbols	= @[@"_OGLogAny", @"_Z5OGLogAny"];
 	NSArray* symbols		= [NSThread callStackSymbols];
 	NSString* function		= @"Unknown function";
 	
@@ -59,54 +59,79 @@ NSString* OGCallingFunction(void)
 	return nil;
 }
 
-void __attribute__((overloadable)) OGLog(void)
+void __attribute__((overloadable)) OGLogAny(void)
 {
 	void * args = NULL;
 	
-	_OGLog(@"", args);
+	_OGLogAny(@"", args);
 }
 
-void __attribute__((overloadable)) OGLog(NSString* format, ...)
+void __attribute__((overloadable)) OGLogAny(NSString* format, ...)
 {
 	va_list args;
 	va_start(args, format);
 	
-	_OGLog(format, args);
+	_OGLogAny(format, args);
 	
 	va_end(args);
 }
 
-void __attribute__((overloadable))	OGLog(float value)
+void __attribute__((overloadable))	OGLogAny(float value)
 {
-	OGLog(@"%f", value);
+	OGLogAny(@"%f", value);
 }
 
-void __attribute__((overloadable))	OGLog(double value)
+void __attribute__((overloadable))	OGLogAny(double value)
 {
-	OGLog(@"%f", value);
+	OGLogAny(@"%f", value);
 }
 
-void __attribute__((overloadable))	OGLog(int value)
+void __attribute__((overloadable))	OGLogAny(int value)
 {
-	OGLog(@"%d", value);
+	OGLogAny(@"%d", value);
 }
 
-void __attribute__((overloadable))	OGLog(unsigned int value)
+void __attribute__((overloadable))	OGLogAny(unsigned int value)
 {
-	OGLog(@"%d", value);
+	OGLogAny(@"%u", value);
 }
 
-void __attribute__((overloadable))	OGLog(long value)
+void __attribute__((overloadable))	OGLogAny(long value)
 {
-	OGLog(@"%ld", value);
+	OGLogAny(@"%ld", value);
 }
 
-void __attribute__((overloadable))	OGLog(long long value)
+void __attribute__((overloadable))	OGLogAny(unsigned long value)
 {
-	OGLog(@"%lld", value);
+	OGLogAny(@"%lu", value);
 }
 
-void __attribute__((overloadable))	OGLog(id value)
+void __attribute__((overloadable))	OGLogAny(long long value)
 {
-	OGLog(@"%@", value);
+	OGLogAny(@"%lld", value);
+}
+
+void __attribute__((overloadable))	OGLogAny(unsigned long long value)
+{
+	OGLogAny(@"%llu", value);
+}
+
+void __attribute__((overloadable))	OGLogAny(CGPoint value)
+{
+	OGLogAny(@"%@", NSStringFromCGPoint(value));
+}
+
+void __attribute__((overloadable))	OGLogAny(CGSize value)
+{
+	OGLogAny(@"%@", NSStringFromCGSize(value));
+}
+
+void __attribute__((overloadable))	OGLogAny(CGRect value)
+{
+	OGLogAny(@"%@", NSStringFromCGRect(value));
+}
+
+void __attribute__((overloadable))	OGLogAny(id value)
+{
+	OGLogAny(@"%@", value);
 }
