@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Orange Groove. All rights reserved.
 //
 
-#import <CoreData/CoreData.h>
+@import CoreData;
 
 @interface NSManagedObject (OGDebuggingTools)
 

@@ -22,7 +22,7 @@
 //  IN THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 #import "NSManagedObject+OGDebuggingTools.h"
 #import "NSObject+OGDebuggingTools.h"
