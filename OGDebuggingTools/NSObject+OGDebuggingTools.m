@@ -120,7 +120,7 @@ deallocTracking;
 			if (!value)
 				[string appendString:@"\n    %@: NULL"];
 			else if ([value isKindOfClass:NSData.class])
-				[string appendFormat:@"\n    %@ (%@): length %d", key, NSStringFromClass([value class]), ((NSData *)value).length];
+				[string appendFormat:@"\n    %@ (%@): length %lu", key, NSStringFromClass([value class]), (unsigned long)((NSData *)value).length];
 			else
 				[string appendFormat:@"\n    %@ (%@): %@", key, NSStringFromClass([value class]), value];
 			

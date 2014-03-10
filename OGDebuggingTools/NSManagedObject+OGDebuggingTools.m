@@ -23,7 +23,7 @@
 		if (!val)
 			val = @"NULL";
 		else if ([val isKindOfClass:NSData.class])
-			val = [NSString stringWithFormat:@"DATA (length %i)", ((NSData *)val).length];
+			val = [NSString stringWithFormat:@"DATA (length %lu)", (unsigned long)((NSData *)val).length];
 		
 		for (NSInteger i = 0; i < indent; i++)
 			[tabs appendString:@"	"];
@@ -58,7 +58,7 @@
 					
 					NSString* objID = obj.objectID.URIRepresentation.absoluteString;
 					
-					[string appendFormat:@"	%@ (%i: %@):\n%@", key, i, objID, [obj descriptionOfAttributesWithIndent:2]];
+					[string appendFormat:@"	%@ (%li: %@):\n%@", key, (long)i, objID, [obj descriptionOfAttributesWithIndent:2]];
 					i++;
 				}
 			}
