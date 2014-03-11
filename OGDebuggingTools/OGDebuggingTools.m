@@ -12,8 +12,25 @@
 
 static NSString* _OGNameFromCallStackSymbol(NSString* symbol)
 {
-	if (symbol.length > 51)
-		return [symbol substringFromIndex:51];
+	NSRange range = [symbol rangeOfString:@" 0x"];
+	
+	if (range.length) {
+		
+		NSUInteger start	= range.location + range.length;
+		range				= [symbol rangeOfString:@" " options:0 range:NSMakeRange(start, symbol.length - start)];
+		
+		if (range.length) {
+			
+			symbol	= [symbol substringFromIndex:range.location+1];
+			range	= [symbol rangeOfString:@" + " options:NSBackwardsSearch];
+			
+			if (range.length)
+				symbol = [symbol substringToIndex:range.location];
+			
+			if ([symbol hasPrefix:@"-"])
+				symbol = [symbol substringFromIndex:1];
+		}
+	}
 	
 	return symbol;
 }
