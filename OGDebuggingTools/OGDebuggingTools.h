@@ -45,3 +45,5 @@ void		__attribute__((overloadable))	OGLogAny(CGPoint value);
 void		__attribute__((overloadable))	OGLogAny(CGSize value);
 void		__attribute__((overloadable))	OGLogAny(CGRect value);
 void		__attribute__((overloadable))	OGLogAny(id value);
+
+extern uint64_t dispatch_benchmark(size_t count, void (^block)(void));
